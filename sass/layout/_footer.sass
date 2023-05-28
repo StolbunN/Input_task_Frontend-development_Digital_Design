@@ -1,0 +1,22 @@
+.footer
+    font-weight: 400
+    color: white
+    background-color: #37383d
+    &__nav
+        display: block
+        @include respond(phone)
+            min-height: 18rem
+    &__menu
+        height: 8rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include respond(phone)
+            flex-direction: column
+            padding: 3rem
+    & .menu__item
+        @include respond(phone)
+            &:not(:last-child)
+                margin-right: 0
+                margin-bottom: 2rem
+

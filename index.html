@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="light-theme">
+    <!-- Меню -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="logo"><img src="icons/earth.svg" /></a>
+          <ul class="menu header__menu">
+            <li class="menu__item">
+              <a href="#section--shoes" class="menu__link" data-link="1"
+                >обувь</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#section--phones" class="menu__link" data-link="2"
+                >телефоны</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#section--cars" class="menu__link" data-link="3"
+                >автомобили</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#section--stationery" class="menu__link" data-link="4"
+                >канцелярские товары</a
+              >
+            </li>
+          </ul>
+          <button class="btn-theme">
+            <i class="icon-sun"></i>
+            <i class="icon-moon-inv"></i>
+          </button>
+          <button class="hamburger">
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Секция с обувью -->
+      <section id="section--shoes" class="section-category">
+        <div class="container">
+          <h2 class="section-title">Обувь</h2>
+          <div class="products" data-product="shoes">
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция с телефонами -->
+      <section id="section--phones" class="section-category">
+        <div class="container">
+          <h2 class="section-title">Телефоны</h2>
+          <div class="products" data-product="phones">
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция с автомобилями -->
+      <section id="section--cars">
+        <div class="container">
+          <h2 class="section-title">Автомобили</h2>
+          <div class="products" data-product="cars">
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция с канцтоварами -->
+      <section id="section--stationery" class="section-category">
+        <div class="container">
+          <h2 class="section-title">Канцелярские товары</h2>
+          <div class="products" data-product="stationery">
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <nav class="nav footer__nav">
+            <ul class="menu footer__menu">
+              <li class="menu__item">
+                <a href="#section--shoes" class="menu__link" data-link="1"
+                  >обувь</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="#section--phones" class="menu__link" data-link="2"
+                  >телефоны</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="#section--cars" class="menu__link" data-link="3"
+                  >автомобили</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="#section--stationery" class="menu__link" data-link="4"
+                  >канцелярские товары</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+
+      <!-- кнопка для возврата наверх страницы  -->
+      <a href="#" class="btn-top">&uarr;</a>
+    </main>
+
+    <!-- Всплывающее меню -->
+    <form class="form hidden">
+      <div class="form__inner--top">
+        <div class="form__inner--top-left">
+          <div class="form__image-container">
+            <!-- <img src="img/cars/car-10.png" alt="" class="form__image" /> -->
+          </div>
+        </div>
+        <div class="form__inner--top-right">
+          <h2 class="form__text">Adidas Men's Messi US11.5 Black</h2>
+          <div class="form__input">
+            <input type="number" id="quantity" value="0" min="0" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+            <label for="quantity">Количество товаров</label>
+          </div>
+          <div class="form__radiobuttons">
+            <div class="form__radiobutton">
+              <input
+                type="radio"
+                name="color"
+                id="color-red"
+                class="form__radiobutton--input"
+              />
+              <label for="color-red" class="form__radiobutton--text"
+                ><span
+                  class="form__radiobutton-radio form__radiobutton-radio_red"
+                ></span
+                >Красный</label
+              >
+            </div>
+            <div class="form__radiobutton">
+              <input
+                type="radio"
+                name="color"
+                id="color-blue"
+                class="form__radiobutton--input"
+              />
+              <label for="color-blue" class="form__radiobutton--text"
+                ><span
+                  class="form__radiobutton-radio form__radiobutton-radio_blue"
+                ></span
+                >Синий</label
+              >
+            </div>
+            <div class="form__radiobutton">
+              <input
+                type="radio"
+                name="color"
+                id="color-green"
+                class="form__radiobutton--input"
+              />
+              <label for="color-green" class="form__radiobutton--text"
+                ><span
+                  class="form__radiobutton-radio form__radiobutton-radio_green"
+                ></span
+                >Зелёный</label
+              >
+            </div>
+            <div class="form__radiobutton">
+              <input
+                type="radio"
+                name="color"
+                id="color-black"
+                class="form__radiobutton--input"
+              />
+              <label for="color-black" class="form__radiobutton--text"
+                ><span
+                  class="form__radiobutton-radio form__radiobutton-radio_black"
+                ></span
+                >Чёрный</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form__inner--bottom">
+        <textarea
+          name="comment"
+          id="comment"
+          class="comment"
+          maxlength="2000"
+          placeholder="Комментарий"
+        ></textarea>
+        <div class="form__buttons">
+          <button class="btn form__btn-buy">Купить</button>
+          <button class="btn form__btn-close">Закрыть</button>
+        </div>
+      </div>
+    </form>
+    <div class="overlay hidden"></div>
+  </body>
+</html>

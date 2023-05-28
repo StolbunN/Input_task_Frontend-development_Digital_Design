@@ -1,0 +1,37 @@
+.hamburger
+    display: none
+    @include respond(horiz-tel)
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 35px
+        cursor: pointer
+        position: relative
+        border: none
+        background: transparent
+        z-index: 100
+        & span, span::before, span::after
+            display: block
+            position: absolute
+            width: 30px
+            height: 3px
+            background-color: black
+            transition: all .3s
+        & span::before, span::after
+            content: ""
+        & span::before
+            top: 10px
+        & span::after
+            bottom: 10px
+
+
+.active
+    & span
+        background-color: transparent
+    & span::after
+        transform: rotate(45deg)
+        top: 50%
+    & span::before
+        transform: rotate(-45deg)
+        top: 50%

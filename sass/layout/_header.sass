@@ -1,0 +1,80 @@
+.header
+    border-bottom: 1px solid #888888
+    position: fixed
+    width: 100%
+    background-color: white
+    z-index: 10
+    background: $color-gray-light
+    // background: transparent
+    &::before
+        @include respond(horiz-tel)
+            content: ""
+            position: fixed
+            width: 100%
+            height: 8rem
+            border-bottom: 1px solid #888888
+            background: $color-gray-light
+            z-index: 90
+    &__menu
+        @include respond(horiz-tel)
+            position: fixed
+            top: 0
+            left: -200%
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.9)
+            color: $color-gray
+            transition: left .3s
+            flex-direction: column
+            align-items: center
+            padding: 15rem
+            overflow: auto
+            text-align: center
+        & .menu__item
+            @include respond(horiz-tel)
+                margin-right: 0
+                margin-bottom: 5rem
+            & .menu__link
+                @include respond(horiz-tel)
+                    &:link, &:visited
+                        font-size: 2rem
+                        font-weight: 700
+        & .menu__link--active
+            @include respond(horiz-tel)
+                color: $color-gray-light
+
+.nav
+    height: 8rem
+    display: grid
+    grid-template-columns: max-content 1fr max-content
+    column-gap: 2rem
+    align-items: center
+    position: relative
+    @include respond(horiz-tel)
+        grid-template-columns: repeat(3, max-content)
+        justify-content: space-between
+
+.menu
+    display: flex
+    justify-self: end
+    transition: all .3s
+    &__item
+        &:not(:last-child)
+            margin-right: 2rem
+            @include respond(horiz-tel)
+                margin-right: 0
+    &__link
+        &:link, &:visited
+            text-transform: uppercase
+            font-size: 1.4rem
+            transition: all 0.2s
+        &:hover
+            font-weight: 700
+    &__link--active
+        font-weight: 700
+        color: black
+    &__active
+        left: 0
+
+.logo
+    z-index: 100

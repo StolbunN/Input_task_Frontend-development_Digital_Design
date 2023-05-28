@@ -1,0 +1,16 @@
+@mixin respond($breakpoint)
+    @if $breakpoint == min-phone
+        @media only screen and ( max-width: 410px)
+            @content
+    @if $breakpoint == phone
+        @media only screen and ( max-width: 575px)
+            @content
+    @if $breakpoint == horiz-tel
+        @media only screen and ( max-width: 767px)
+            @content
+    @if $breakpoint == tablet
+        @media only screen and ( max-width: 1024px)
+            @content
+    @if $breakpoint == big-desktop
+        @media only screen and ( min-width: 1800px)
+            @content

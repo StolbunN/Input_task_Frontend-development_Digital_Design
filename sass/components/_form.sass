@@ -1,0 +1,125 @@
+.form
+    width: 60%
+    margin: 0 auto
+    padding: 4rem
+    position: fixed
+    z-index: 100
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: $color-gray-light
+    transition: all .5s
+    @include respond(horiz-tel)
+        width: 80%
+    @include respond(phone)
+        width: 90%
+    @include respond(min-phone)
+        width: 95%
+
+    &__image-container
+        height: 20rem
+        @include respond(phone)
+            height: 30rem
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: contain
+    &__text
+        font-size: 2rem
+        @include respond(phone)
+            margin-bottom: 1.5rem
+
+    &__input
+        margin-bottom: 2rem
+    &__radiobuttons
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 1.5rem
+    &__radiobutton
+        display: flex
+        align-items: center
+    &__radiobutton--input
+        display: none
+    &__radiobutton--text
+        position: relative
+        padding-left: 2.3rem
+        cursor: pointer
+    &__radiobutton-radio
+        cursor: pointer
+        display: inline-block
+        width: 2rem
+        height: 2rem
+        border-radius: 50%
+        position: absolute
+        left: 0
+        top: -.5rem
+        &::after
+            content: ""
+            display: inline-block
+            width: 1rem
+            height: 1rem
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: all .2s
+        &_red
+            border: .3rem solid red
+            &::after
+                background: red
+        &_blue
+            border: .3rem solid blue
+            &::after
+                background: blue
+        &_green
+            border: .3rem solid green
+            &::after
+                background: green
+        &_black
+            border: .3rem solid black
+            &::after
+                background: black
+    &__buttons
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 4rem
+
+    &__radiobutton--input:checked ~ &__radiobutton--text &__radiobutton-radio::after
+        opacity: 1
+
+    &__inner--top
+        display: flex
+        margin-bottom: 1rem
+        @include respond(phone)
+            display: block
+    &__inner--top-right
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 1rem
+
+.comment
+    width: 100%
+    height: 10rem
+    resize: none
+    margin-bottom: 2rem
+#quantity
+    width: 100%
+    margin-bottom: .5rem
+
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.5)
+    backdrop-filter: blur(4px)
+    z-index: 50
+    transition: all .5s
+
+.hidden
+    visibility: hidden
+    opacity: 0
